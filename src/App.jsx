@@ -15,14 +15,12 @@ export default function App() {
       );
     }
     return (
-      <>
         <section className="details">
           <h2>Episode {selectedEpisode.id}</h2>
           <h3>{selectedEpisode.title}</h3>
           <p>{selectedEpisode.description}</p>
+          <button>Watch Now</button>
         </section>
-        <button>Watch Now</button>
-      </>
     );
   }
 
@@ -45,7 +43,7 @@ export default function App() {
   return (
     <>
     <header>
-      <h1>Dard Echoes</h1>
+      <h1>Dark Echoes</h1>
     </header>
     <main>
       <LineUp />
