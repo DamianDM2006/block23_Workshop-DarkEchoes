@@ -5,7 +5,7 @@ export default function App() {
   const [episodes] = useState(episodeList);
   const [selectedEpisode, setSelectedEpisode] = useState();
 
-  const EpisodeDetails () => {
+  const EpisodeDetails = () => {
     if (!selectedEpisode) {
       return (
         <section className="details">
@@ -15,10 +15,14 @@ export default function App() {
       );
     }
     return (
-      <section className="details">
-        <h2>{selectedEpisode.id}</h2>
-        <h3>{selectedEpisode.title}</h3>
-      </section>
+      <>
+        <section className="details">
+          <h2>Episode {selectedEpisode.id}</h2>
+          <h3>{selectedEpisode.title}</h3>
+          <p>{selectedEpisode.description}</p>
+        </section>
+        <button>Watch Now</button>
+      </>
     );
   }
 
@@ -37,4 +41,16 @@ export default function App() {
       </section>
     );
   }
+
+  return (
+    <>
+    <header>
+      <h1>Dard Echoes</h1>
+    </header>
+    <main>
+      <LineUp />
+      <EpisodeDetails />
+    </main>
+    </>
+  )
 }
